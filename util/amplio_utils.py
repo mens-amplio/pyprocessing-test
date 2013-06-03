@@ -3,13 +3,12 @@ from random import random
 
 
 def drawLEDs(network):
-    pp.translate(-300,-300)
     for n in network.G.nodes_iter():
         pp.pushMatrix()
         pp.noStroke()
         pp.translate(*n.coords)
         pp.fill(pp.color(100, 100, 100)) #all nodes are grey for now
-        pp.sphere(5)
+        pp.sphere(2)
         pp.popMatrix()
     pp.strokeWeight(3)
     for e in network.G.edges_iter(data=True):
