@@ -34,7 +34,7 @@ def set_values(input_network):
 
 def draw():
     pp.background(0x000000)
-    pp.translate(width/2.0, height/2.0, -height/4.0)
+    pp.translate(width/2.0, height/2.0, -height/4.0 + 400) # +400 is a kludge to make big
     defineLights()
     update()
     pp.lights()
