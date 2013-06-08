@@ -8,7 +8,7 @@ def drawLEDs(network):
         pp.noStroke()
         pp.translate(*n.coords)
         pp.fill(pp.color(100, 100, 100)) #all nodes are grey for now
-        pp.sphere(1)
+        #pp.sphere(1)
         pp.popMatrix()
     pp.strokeWeight(3)
     for e in network.G.edges_iter(data=True):

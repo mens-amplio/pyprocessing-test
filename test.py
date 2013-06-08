@@ -7,7 +7,7 @@ network = Network()
 n1 = network.add_node( 20, 20, 20 )
 n2 = network.add_node( 25, 40, 0 )
 network.add_edge( n1, n2, (255,0,0) )
-display = Emulator(network)
+display = Emulator(network, False)
 
 # wait a bit, modify the network some way, and pass the updated network into the
 # visualizer. eventually we will want to pass in the update data in some better/different
@@ -17,3 +17,5 @@ sleep(1)
 n3 = network.add_node( 5, 0, 40 )
 network.add_edge( n1, n3, (0,255,0) )
 display.update(network)
+
+external_run(display.queue, display.network)
