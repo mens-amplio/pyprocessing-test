@@ -23,7 +23,7 @@ edge_by_id = {}
 for edge_id, edge_pair in data["edges"].items():
   node = network.add_node( *point )
   n1, n2 = edge_pair
-  network.add_edge( node_by_id[n1], node_by_id[n2], (255,0,0))
+  network.add_edge( node_by_id[n1], node_by_id[n2], (255,random.randint(0,255),random.randint(0,255)))
 
 # single-threaded, for now.
 display = Emulator(network, False)
